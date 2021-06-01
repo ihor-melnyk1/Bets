@@ -1,0 +1,40 @@
+.actions {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  button {
+  margin-left: 1rem;
+  color: #FFFFFF;
+  border-color: #0039E0;
+  background-color: #0039E0;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  height: 2rem;
+  padding: 0 1rem;
+  font-size: 0.9375rem;
+  min-width: auto;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  border-radius: 6.25rem;
+  background-clip: padding-box;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+@media only screen and (max-width: 426px) {
+  .actions {
+    display: block;
+  }
+  .buttons {
+    justify-content: center;
+    margin-top: 0.5rem;
+    gap: 1rem;
+    button {
+      margin: 0;
+    }
+  }
+}

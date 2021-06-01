@@ -27,6 +27,9 @@ const Paginator = () => {
       dispatch(setIsFound(true));
       dispatch(setPageItems(filtered.slice(pageSize * (page - 1), pageSize * (page))));
       dispatch(setLastPage(Math.ceil(filtered.length / pageSize)));
+      if(page>lastPage) {
+        dispatch(setPage(page-1))
+      }
     }
     if(prevButton.current) {
       if (page === 1) {
@@ -46,13 +49,13 @@ const Paginator = () => {
   
   return  (
     <ul className={s.paginator}>
-      <button onClick={()=>{dispatch(setPage(1))}}>First</button>
+      <button className={s.first} onClick={()=>{dispatch(setPage(1))}}>First</button>
       <button onClick={()=>{dispatch(setPage(page-1))}} ref={prevButton}>Prev</button>
       <div className={s.pageCount}>
         <div>Page: {page}/{lastPage}</div>
       </div>
       <button onClick={()=>{dispatch(setPage(page+1))}} ref={nextButton}>Next</button>
-      <button onClick={()=>{dispatch(setPage(lastPage))}}>Last</button>
+      <button className={s.last} onClick={()=>{dispatch(setPage(lastPage))}}>Last</button>
     </ul>
   )
 }

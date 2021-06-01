@@ -50,8 +50,10 @@ const Actions = () => {
   return  (
     <div className={s.actions}>
       <input className={s.search} type='search' placeholder='Search by team name' onChange={handleChangeSearch} ></input>
-      <button onClick={handleSortLeague}>Sort by league</button>
-      <button onClick={handleSortTime}>Sort by time</button>
+      <div className={s.buttons}>
+        <button onClick={handleSortLeague}>Sort by league</button>
+        <button onClick={handleSortTime}>Sort by time</button>
+      </div>
     </div>
   )
 }

@@ -23,7 +23,51 @@ export const MENU = [
     id: 'news',
   },
   {
-    title:'FAQ',
+    title:'About',
+    to: '/about',
+    id: 'faq',
+  },
+  {
+    title:'Support',
+    to: '/support',
+    id: 'support',
+  },
+];
+
+export const SIDEMENU = [
+  {
+    title:'The best',
+    to: '/',
+    id: 'fire',
+    amount: 228,
+  },
+  {
+    title:'Live',
+    to: '/live',
+    id: 'live',
+    amount: 322,
+  },
+  {
+    title:'Favorites',
+    to: '/favorites',
+    id: 'star',
+    amount: 0,
+  },
+]
+
+export const MOBILEMENU = [
+  {
+    title:'Matches',
+    to: '/',
+    id: 'ball'
+  },
+  {
+    title:'Leagues',
+    to: '/leagues',
+    id: 'news',
+  },
+  {
+    title:'About',
     to: '/about',
     id: 'faq',
   },
@@ -32,7 +76,20 @@ export const MENU = [
     to: '/contact',
     id: 'support',
   },
+  {
+    title:'Live',
+    to: '/live',
+    id: 'live',
+    amount: 322,
+  },
+  {
+    title:'Favorites',
+    to: '/favorites',
+    id: 'star',
+    amount: 0,
+  },
 ];
+
 
 export const IMAGES = [
   {

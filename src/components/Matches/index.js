@@ -20,7 +20,7 @@ const Matches = ({request}) => {
         "method": "GET",
         "headers": {
           "x-rapidapi-host": "v3.football.api-sports.io",
-          "x-rapidapi-key": "8de0cb804bb283073955390506333b4c"
+          "x-rapidapi-key": "1f1e6f5821cc602fb70cb4b2d00a981c"
         }
       })
       .then(res => res.json())
@@ -28,7 +28,8 @@ const Matches = ({request}) => {
         (result) => {
           if(result.status === 'error' || result.message || !result.response.length) {
             setError(result.errors.token);
-            setIsLoaded(true); 
+            setIsLoaded(true);
+            dispatch(setMatches([]));
           } else {
             setIsLoaded(true);
             dispatch(setMatches(result.response));

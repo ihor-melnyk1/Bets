@@ -1,6 +1,7 @@
 import s from './style.module.scss';
 import {useState, useEffect} from 'react';
 import {response} from '../../leagues.json'
+import { nanoid } from 'nanoid';
 
 const Leagues = () => {
   const [count,setCount] = useState(0);
@@ -15,7 +16,7 @@ const Leagues = () => {
       <>
       <ul className={s.leagues}>
         {leagues.map(({league:{name,logo}})=>(
-          <li className={s.item}>
+          <li className={s.item} key={nanoid()}>
             <figure className={s.figure}>
               <div className={s.container}><img src={logo} alt={name} className={s.logo}></img></div>
               <figcaption>{name}</figcaption>

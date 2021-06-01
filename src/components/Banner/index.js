@@ -12,7 +12,35 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 5000,
-  pauseOnHover: true
+  pauseOnHover: true,
+  responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+      }
+    },
+    {
+      breakpoint: 426,
+      settings: {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        pauseOnHover: true,
+      }
+    },
+  ]
 };
 
 

@@ -3,7 +3,7 @@ import { css } from "@emotion/react";
  
 const override = css`
   display: block;
-  margin: 50vh auto;
+  margin: 20vh auto;
 `;
 
 const Loader = () => {

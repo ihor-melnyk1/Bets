@@ -1,7 +1,8 @@
 import s from './style.module.scss';
 import { NavLink } from 'react-router-dom';
 import Odds from '../Odds';
- 
+import noImage from '../../assets/no-image.png';
+
 const PageItem = ({fixture:{id,date,status:{short}},league:{name},teams:{home,away}}) => {
   
   return (
@@ -15,7 +16,7 @@ const PageItem = ({fixture:{id,date,status:{short}},league:{name},teams:{home,aw
             <span className={s.league}>{name}</span>
           </div>
           <div className={s.icons}>
-            {(short==='NS' || short==='TBD')?null:<div className={s.live}>Live</div>}
+            {(short==='NS' || short==='TBD' || short==='FT')?null:<div className={s.live}>Live</div>}
             <svg className={s.icon}>
               <use xlinkHref={`/icons.svg#favorite`}></use>
             </svg>
@@ -30,11 +31,11 @@ const PageItem = ({fixture:{id,date,status:{short}},league:{name},teams:{home,aw
           </div>
           <div className={s.teams}>
             <div className={s.team1}>
-              <img src={home.logo} alt={home.name} className={s.logo}></img>
+              <img src={home.logo} onError={(e)=>{ e.target.src=noImage}} alt={home.name} className={s.logo}></img>
               {home.name}
             </div>
             <div className={s.team2}>
-              <img src={away.logo} alt={away.name} className={s.logo}></img>
+              <img src={away.logo} onError={(e)=>{ e.target.src=noImage}} alt={away.name} className={s.logo}></img>
               {away.name}
             </div>
           </div>

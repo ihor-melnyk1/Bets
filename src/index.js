@@ -8,11 +8,14 @@ import store from './store';
 import App from './App'
 
 import './index.css'
+import ErrorBoundary from './components/ErrorBoundary';
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
-      <App/>
+      <ErrorBoundary>
+        <App/>
+      </ErrorBoundary>
     </BrowserRouter>
   </Provider>
   , document.getElementById('root'));

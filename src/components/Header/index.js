@@ -2,21 +2,16 @@ import s from './style.module.scss';
 import {Link, NavLink} from 'react-router-dom';
 import logo from '../../assets/logo.png'
 import {useState} from 'react';
-import Menu from '../MobileMenu';
 import cn from 'classnames';
-import { useDispatch, useSelector } from 'react-redux';
-import { getIsBlured, setIsBlured } from '../../store/matches';
 import { MENU } from '../../data';
+import MobileMenu from '../MobileMenu';
 
 
 
 const Header = () => {
-  const dispatch = useDispatch();
-  const isBlured = useSelector(getIsBlured)
   const [isActive,setActive] = useState(null);
   const handleSetMenu =()=>{
     setActive(prevstate=>!prevstate);
-    dispatch(setIsBlured(!isBlured));
   }
   return  (
     <>
@@ -44,7 +39,7 @@ const Header = () => {
           <span />
         </div>
     </header>
-    <Menu isActive={isActive} onSetMenu={handleSetMenu}/>
+    <MobileMenu isActive={isActive} onSetMenu={handleSetMenu}/>
     </>
   )
 }

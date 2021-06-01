@@ -3,27 +3,9 @@ import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCountries, getMatches, setFiltered, setPage } from '../../store/matches';
 import { useState, useEffect } from 'react';
- 
-const SIDEMENU = [
-  {
-    title:'The best',
-    to: '/',
-    id: 'fire',
-    amount: 228,
-  },
-  {
-    title:'Live',
-    to: '/live',
-    id: 'live',
-    amount: 322,
-  },
-  {
-    title:'Favorites',
-    to: '/test',
-    id: 'star',
-    amount: 0,
-  },
-]  
+import { SIDEMENU } from '../../data';
+import noImage from '../../assets/no-image.png'  
+import { useRef } from 'react';
 
 const SideMenu = () => {
   const matches = useSelector(getMatches);
@@ -48,6 +30,23 @@ const SideMenu = () => {
     }
   }
 
+  const form = useRef(null);
+
+  const handleClickAll = (e)=> {
+    if(e.target.checked) {
+      for(let i=0;i<form.current.length;i++){
+        form.current[i].checked=true;
+      }
+      setFilter(matches);
+    } else {
+      for(let i=0;i<form.current.length;i++){
+        form.current[i].checked=false;
+      }
+      setFilter(matches);
+    }
+  }
+
+
   
   return (
     <div className={s.side}>
@@ -59,19 +58,24 @@ const SideMenu = () => {
               <use xlinkHref={`/icons.svg#${id}`}></use>
             </svg>
             <div>{title}</div>
-            <div className={s.amount}>{amount}</div>
           </NavLink>
         ))}
       </nav>
       <h4>Filter by countries</h4>
       <ul className={s.filter}>
+        <li className={s.country}>
+          <input className={s.all} type='checkbox' onClick={handleClickAll}></input>
+          <div className={s.countryName}>Select all</div>
+        </li>
+        <form ref={form}>
         {countries.map(({country,flag})=>(
           <li className={s.country} key={country}>
-            <input id={country} type='checkbox' onClick={handleClickCheckbox}></input>
-            <img src={flag} className={s.flag} alt={country}></img>
-            <div>{country}</div>
+            <input id={country} type='checkbox' onChange={handleClickCheckbox}></input>
+            <img src={flag || noImage} className={s.flag} alt={country}></img>
+            <div className={s.countryName}>{country}</div>
           </li>
         ))}
+        </form>
       </ul>
     </div>
   )

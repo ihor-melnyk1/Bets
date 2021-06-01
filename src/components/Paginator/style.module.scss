@@ -36,3 +36,18 @@
     border-radius: 6.25rem;
     background-clip: padding-box;
 }
+
+@media only screen and (max-width: 426px) {
+  .paginator {
+    :not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .first,
+  .last {
+    display: none;
+  }
+}

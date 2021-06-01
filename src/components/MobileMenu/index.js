@@ -1,9 +1,9 @@
 import s from './style.module.scss';
 import cn from 'classnames';
 import {NavLink} from 'react-router-dom';
-import { MENU } from '../../data';
+import { MOBILEMENU } from '../../data';
 
-const MobileMenu = ({isActive}) => {
+const MobileMenu = ({isActive,onSetMenu}) => {
   return  (
         <div className={cn(s.menuContainer,{
           [s.active]: isActive===true,
@@ -12,8 +12,8 @@ const MobileMenu = ({isActive}) => {
           <div >
             <nav className={s.menu}>
               {
-                MENU.map(({title,to,id},index)=>(
-                  <NavLink to ={to} className={s.item} exact activeClassName={s.linkActive} key={index}>
+                MOBILEMENU.map(({title,to,id},index)=>(
+                  <NavLink to ={to} className={s.item} exact activeClassName={s.linkActive} key={index} onClick={()=>{onSetMenu()}} >
                     <svg className={s.icon}>
                       <use xlinkHref={`/icons.svg#${id}`}></use>
                     </svg>
