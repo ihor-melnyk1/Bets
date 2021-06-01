@@ -1,0 +1,122 @@
+.menuContainer {
+  position: fixed;
+  right: 0;
+  height: 100vh;
+  width: 14rem;
+  background-color: rgb(237, 238, 239);
+  overflow: hidden;
+  opacity: 0;
+  z-index: -1;
+  padding-top: 1rem;
+}
+
+.menuContainer.deactive {
+  animation: fade-out 600ms forwards;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    z-index: 999;
+  }
+  50% {
+    opacity: 1;
+    z-index: 999;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+.menuContainer.active {
+  animation: fade-in 300ms forwards;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    z-index: -1;
+  }
+  to {
+    opacity: 1;
+    z-index: 999;
+  }
+}
+
+
+.menu {
+    align-items: center;
+    height: 100%;
+    
+    :not(:last-child) {
+        border-right: 1px solid #353B5A;
+    }
+}
+
+.item {
+    display: flex;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    padding: 0.5rem;
+    color: rgb(53, 59, 90);
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 1rem;
+    fill:#353B5A;
+}
+
+.linkActive {
+    color: rgb(0, 57, 224);
+    border-left: 0.25rem solid rgb(0, 57, 224);;
+    svg {
+        fill: rgb(0, 57, 224);
+    }
+}
+
+.logo {
+    
+    padding-right: 0.5rem;
+    img {
+        width: 9rem;
+    }
+}
+
+.hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid rgba(0, 57, 224, 0.08);
+}
+
+.hoursitem {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    color: rgb(170, 179, 191);
+    width: 2rem;
+    padding: 0.25rem 0;
+}
+
+.hoursactive {
+    color: rgb(0, 57, 224);
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: rgb(0, 57, 224);
+    }
+}

@@ -1,0 +1,141 @@
+.side {
+    display: block;
+    position: sticky;
+    align-self: flex-start;
+    background-color: transparent;
+    top: 3.5rem;
+    padding-top: 0.5rem;
+    width: 17rem;
+    height: calc(100vh - 3.5rem);
+    padding:0.5rem;
+    overflow-y: scroll;
+    h4 {
+        font-size: 0.875rem;
+        line-height: 1rem;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-bottom: 0.75rem;
+        font-family: Roboto, sans-serif;
+        color: rgb(53, 59, 90);
+        text-align: left;
+    }
+}
+
+.menu {
+    margin-bottom: 1.25rem;
+}
+
+
+.item {
+    padding: 0px 0.5rem;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    min-height: 2.125rem;
+    box-sizing: border-box;
+    border: none;
+    width: 100%;
+    outline: none;
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    border-radius: 0.25rem;
+    color: rgb(53, 59, 90);
+}
+
+.icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    margin-right: 0.25rem;
+    fill:rgb(129, 146, 168);
+}
+
+
+.active {
+    color: rgb(4, 90, 255);
+    background-color: rgba(255, 255, 255, 0.6);
+    svg {
+        fill: rgb(0, 57, 224);
+    }
+    .live {
+        fill: none;
+        
+    }
+}
+
+#circle1 {
+            fill: black;
+        }
+
+.amount {
+    text-align: center;
+    font-family: Roboto, sans-serif;
+    margin-left: auto;
+    font-size: 0.75rem;
+    line-height: 0.875rem;
+    color: rgb(53, 59, 90);
+}
+
+.live {
+    fill: none;
+}
+
+.hours {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+    border-bottom: 1px solid rgba(0, 57, 224, 0.08);
+    margin: 1.25rem 0;
+}
+
+.hoursitem {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+    color: rgb(170, 179, 191);
+    width: 2rem;
+    padding: 0.25rem 0;
+}
+
+.hoursactive {
+    color: rgb(0, 57, 224);
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: rgb(0, 57, 224);
+    }
+}
+
+.country {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    color: rgb(53, 59, 90);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+}
+
+.flag {
+    width: 20px;
+    margin: 0 0.5rem;
+}
+
+@media only screen and (max-width: 968px) {
+    .side {
+        width: 13rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .side {
+        display: none;
+    }
+}
+
+

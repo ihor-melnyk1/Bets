@@ -1,0 +1,173 @@
+.header {
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 0.125rem 0.5rem rgba(0, 0, 0, 0.15);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1900;
+    padding: 0 0.5rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-left: 2.5rem;
+    height: 100%;
+    
+    :not(:last-child) {
+        border-right: 1px solid #353B5A;
+    }
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 1.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(53, 59, 90);
+    text-decoration: none;
+}
+
+.icon {
+    width: 1.25rem;
+    height: auto;
+    margin-right: 0.25rem;
+    fill:#353B5A;
+}
+
+.active {
+    color: rgb(0, 57, 224);
+    position: relative;
+    svg {
+        fill: rgb(0, 57, 224);
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        left: 1.5rem;
+        right: 1.5rem;
+        height: 3px;
+        background-color: rgb(0, 57, 224);
+    }
+}
+
+.logo {
+    
+    padding-right: 0.5rem;
+    img {
+        width: 9rem;
+    }
+}
+
+.auth {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    button {
+        border: 1px solid transparent;
+        height: 2rem;
+        padding: 0 1rem;
+        margin: 0.5rem;
+        font-size: 0.9375rem;
+        min-width: auto;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        border-radius: 6.25rem;
+        background-clip: padding-box;
+    }
+}
+
+.login {
+    color: #353B5A;
+    background-color: rgba(0,57,224,0.08);
+}
+
+.signUp {
+    color: #FFFFFF;
+    border-color: #0039E0;
+    background-color: #0039E0;
+}
+
+.menuButton {
+  position: relative;
+  height: 22px;
+  width: 30px;
+  outline: none;
+  display: none;
+}
+
+.menuButton span,
+.menuButton span::before,
+.menuButton span::after {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 3px;
+  background: #0039E0;
+  transition: 500ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.menuButton span {
+  position: relative;
+  display: block;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+
+.menuButton span::before {
+  top: -8px;
+  left: 0;
+}
+
+.menuButton span::after {
+  top: 8px;
+  left: 0;
+}
+
+
+
+.menuButton.active > span  {
+  background: transparent;
+}
+
+.menuButton.active > span::before  {
+  transform: rotate(-225deg);
+  top: 0px;
+}
+
+.menuButton.active > span::after  {
+  transform: rotate(225deg);
+  top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .menuButton {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+   .auth button {
+       height: 2.5rem;
+   }
+   .logo {
+    
+    padding-right: 0;
+    img {
+        width: 7rem;
+    }
+}
+}
+

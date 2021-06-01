@@ -1,0 +1,25 @@
+.item {
+    align-items: center;
+    height: 100%;
+    padding:0 0.5rem;
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: rgb(53, 59, 90);
+    text-decoration: none;
+}
+
+.active {
+    color: rgb(0, 57, 224);
+    position: relative;
+}
+
+.breadcrumbs {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 0.5rem 0;
+    :not(:last-child) {
+        border-right: 1px solid #353B5A;
+    }
+}

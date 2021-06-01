@@ -1,0 +1,55 @@
+.leagues {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    color: rgb(53, 59, 90);
+}
+
+.item {
+   margin-bottom: 2rem;
+}
+
+.figure {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width:150px;
+    margin-bottom: 0.5rem;
+}
+
+.button {
+    border: 1px solid transparent;
+    height: 2rem;
+    padding: 0 1rem;
+    margin: 0.5rem;
+    font-size: 0.9375rem;
+    min-width: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 6.25rem;
+    background-clip: padding-box;
+    color: #FFFFFF;
+    border-color: #0039E0;
+    background-color: #0039E0;
+}
+
+@media only screen and (max-width: 426px) {
+    .leagues {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .leagues {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

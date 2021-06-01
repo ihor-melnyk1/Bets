@@ -1,0 +1,38 @@
+.paginator {
+  display: flex;
+  justify-content: center;
+    margin: 10px 0;
+  :not(:last-child) {
+    margin-right: 30px;
+  }
+  button {
+    color: #353B5A;
+    background-color: rgba(0,57,224,0.08);
+    border: 1px solid transparent;
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: 0.9375rem;
+    min-width: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 6.25rem;
+    background-clip: padding-box;
+  }
+}
+
+.pageCount {
+    color: #FFFFFF;
+    border-color: #0039E0;
+    background-color: #0039E0;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    height: 2rem;
+    padding: 0 1rem;
+    font-size: 0.9375rem;
+    min-width: auto;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    border-radius: 6.25rem;
+    background-clip: padding-box;
+}
