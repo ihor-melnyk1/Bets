@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Bets/static/css/main.b81261ab.chunk.css",
+    "main.js": "/Bets/static/js/main.4bd3236c.chunk.js",
+    "main.js.map": "/Bets/static/js/main.4bd3236c.chunk.js.map",
+    "runtime-main.js": "/Bets/static/js/runtime-main.803c0e55.js",
+    "runtime-main.js.map": "/Bets/static/js/runtime-main.803c0e55.js.map",
+    "static/css/2.2f93ccc1.chunk.css": "/Bets/static/css/2.2f93ccc1.chunk.css",
+    "static/js/2.0d22adfe.chunk.js": "/Bets/static/js/2.0d22adfe.chunk.js",
+    "static/js/2.0d22adfe.chunk.js.map": "/Bets/static/js/2.0d22adfe.chunk.js.map",
+    "index.html": "/Bets/index.html",
+    "static/css/2.2f93ccc1.chunk.css.map": "/Bets/static/css/2.2f93ccc1.chunk.css.map",
+    "static/css/main.b81261ab.chunk.css.map": "/Bets/static/css/main.b81261ab.chunk.css.map",
+    "static/js/2.0d22adfe.chunk.js.LICENSE.txt": "/Bets/static/js/2.0d22adfe.chunk.js.LICENSE.txt",
+    "static/media/no-image.0e049a38.png": "/Bets/static/media/no-image.0e049a38.png",
+    "static/media/slick-theme.css": "/Bets/static/media/slick.c94f7671.ttf"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.803c0e55.js",
+    "static/css/2.2f93ccc1.chunk.css",
+    "static/js/2.0d22adfe.chunk.js",
+    "static/css/main.b81261ab.chunk.css",
+    "static/js/main.4bd3236c.chunk.js"
+  ]
+}
