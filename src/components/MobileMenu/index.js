@@ -13,7 +13,9 @@ const MobileMenu = ({isActive,onSetMenu}) => {
             <nav className={s.menu}>
               {
                 MOBILEMENU.map(({title,to,id},index)=>(
-                  <NavLink to ={to} className={s.item} exact activeClassName={s.linkActive} key={index} onClick={()=>{onSetMenu()}} >
+                  <NavLink to={to} className={({ isActive }) => cn(s.item, {
+                    [s.linkActive]: isActive
+                  })} end key={index} onClick={()=>{onSetMenu()}} >
                     <svg className={s.icon}>
                       <use xlinkHref={`/icons.svg#${id}`}></use>
                     </svg>

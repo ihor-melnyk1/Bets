@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import { SIDEMENU } from '../../data';
 import noImage from '../../assets/no-image.png'  
 import { useRef } from 'react';
+import cn from 'classnames';
 
 const SideMenu = () => {
   const matches = useSelector(getMatches);
@@ -53,7 +54,9 @@ const SideMenu = () => {
       <h4>Collections</h4>
       <nav className={s.menu}>
         {SIDEMENU.map(({title,to,id,amount})=>(
-          <NavLink to ={to} className={s.item} exact activeClassName={s.active} key={id}>
+          <NavLink to={to} className={({ isActive }) => cn(s.item, {
+            [s.active]: isActive
+          })} end key={id}>
             <svg className={s.icon}>
               <use xlinkHref={`/icons.svg#${id}`}></use>
             </svg>

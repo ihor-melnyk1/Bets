@@ -22,7 +22,9 @@ const Header = () => {
         <nav className={s.menu}>
               {
                 MENU.map(({title,to,id},index)=>(
-                  <NavLink to ={to} className={s.item} exact activeClassName={s.active} key={index}>
+                  <NavLink to={to} className={({ isActive }) => cn(s.item, {
+                    [s.active]: isActive
+                  })} end key={index}>
                     <svg className={s.icon}>
                       <use xlinkHref={`/icons.svg#${id}`}></use>
                     </svg>
